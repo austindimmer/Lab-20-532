@@ -46,7 +46,8 @@ namespace Contoso.Events.ViewModels
                     };
                     string messageString = JsonConvert.SerializeObject(message);
 
-                    GenerateSignInSheetTableStorage(context, eventItem, messageString);
+                    //GenerateSignInSheetTableStorage(context, eventItem, messageString);
+                    GenerateSignInSheetServiceBus(context, eventItem, message);
                 }
             }
         }

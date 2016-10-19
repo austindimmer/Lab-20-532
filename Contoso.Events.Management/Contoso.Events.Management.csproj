@@ -212,8 +212,10 @@
     <None Include="Properties\PublishProfiles\20532labscontosoeventsmanagement - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\20532labscontosoeventsmanagement - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\20532labscontosoeventsmanagement-dev - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\20532labscontosoeventsmanagement-dev - FTP %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\20532labscontosoeventsmanagement-dev - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\20532labscontosoeventsmanagement-dev - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\20532labscontosoeventsmanagement-dev - Web Deploy %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\20532labscontosoeventsmanagement-dev - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />

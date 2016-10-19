@@ -2,6 +2,7 @@
 using Contoso.Events.Documents;
 using Contoso.Events.Models;
 using Microsoft.Azure.WebJobs;
+using Microsoft.ServiceBus.Messaging;
 using Microsoft.WindowsAzure.Storage.Queue;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,11 @@ namespace Contoso.Events.Worker
         private static readonly SignInDocumentGenerator _documentGenerator = new SignInDocumentGenerator();
         private static readonly BlobStorageHelper _blobHelper = new BlobStorageHelper();
         private static readonly TableStorageHelper _tableHelper = new TableStorageHelper();
-        private static readonly IQueueHelper<CloudQueueMessage> _queueHelper = new TableStorageQueueHelper();
+        //private static readonly IQueueHelper<CloudQueueMessage> _queueHelper = new TableStorageQueueHelper();
+        private static readonly IQueueHelper<BrokeredMessage> _queueHelper = new ServiceBusQueueHelper();
 
-        public static void ProcessQueueMessage([QueueTrigger("signin")] QueueMessage message, TextWriter log)
+        //public static void ProcessQueueMessage([QueueTrigger("signin")] QueueMessage message, TextWriter log)
+        public static void ProcessQueueMessage([ServiceBusTrigger("signin")] QueueMessage message, TextWriter log)
         {
             HandleMessage(message);
         }
